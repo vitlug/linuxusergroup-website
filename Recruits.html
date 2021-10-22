@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://localhost:1337/2020/recruits.html -->
+<html lang="en" class="gr__localhost"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./Recruits_files/style.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <section>
+        <a href="index.html"><<< GO TO ROOT</a>
+    </section>
+    <title>Recruits</title>
+<script type="text/javascript">
+function rtcScript() {
+    document.oncontextmenu = null;
+    document.onselectstart = null;
+    document.onmousedown = null;
+    document.onclick = null;
+    document.oncopy = null;
+    document.oncut = null;
+    var elements = document.getElementsByTagName('*');
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].oncontextmenu = null;
+        elements[i].onselectstart = null;
+        elements[i].onmousedown = null;
+        elements[i].oncopy = null;
+        elements[i].oncut = null;
+    }
+    function preventShareThis() {
+        document.getSelection = window.getSelection = function() {
+            return {isCollapsed: true};
+        }
+    }
+    var scripts = document.getElementsByTagName('script');
+    for (var i = 0; i < scripts.length; i++) {
+        if (scripts[i].src.indexOf('w.sharethis.com') > -1) {
+            preventShareThis();
+        }
+    }
+    if (typeof Tynt != 'undefined') {
+        Tynt = null;
+    }
+}
+rtcScript();
+setInterval(rtcScript, 2000);</script><style>
+* {
+    -webkit-user-select: auto !important; /* injected by RightToCopy */
+}</style></head>
+<body data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+    <section>
+        Congratulations Comrades. We welcome you to the journey of building the world.
+    </section><br>
+    <section id="recruits">
+
+    Mahendra Paliwal<br>17BCE0204<hr>Puja C<br>17BEE0129<hr>Adikansh mittal<br>Not Provided<hr>T.sai Ashritha<br>18BIT0198<hr>N. Siva sai Akhilesh<br>19MIS0309<hr>(R) Sakshi Varam<br>18BCE2214<hr>S. Nivedha<br>18BIT0246<hr>Sarthak Pranesh<br>18BCE0814<hr>Venkata satya<br>19BCI0142<hr>Gowtham Pollam<br>18BCI0120<hr>Ajay Babu<br>18BCE0972<hr>Nishal Kulkarni<br>19BCE0243<hr>Agrim Nagrani<br>19BCT0217<hr>Anchuri Harish<br>18BCE0342<hr>Gokul Leburu<br>18BCI0093<hr>Abhinav Mallam<br>19BCE0733<hr>S Harshit<br>18BCI0099<hr>Keshav<br>19BCE2148<hr>Tanish Malekar<br>19BCT0084<hr>Darsh Sharma<br>18BCE0679<hr>Shantanu Varma<br>18BCE0185<hr>N Sri Harsha<br>18BCI0126<hr>G Mahalakshmi<br>18BIT0462<hr>Y Aashik<br>18BCI0098<hr>Aryan Shridhar<br>19BCE0801<hr>Aman Chawla<br>18BIT0055<hr>Tej Prakash<br>18BCI0035<hr>Subarna Lamsal<br>18BCE2398<hr>Gautam<br>Not Provided<hr>Poornesh adithya<br>19BCE2472<hr>Aditi M<br>18BCE0010<hr>Srikar A<br>18BCE0286<hr>Mohana Siva sai<br>18BCE0352<hr>N Swarag<br>18BCI0154<hr>Raghav Tabra<br>19BCE2269<hr>Aditi K<br>18BCE0656<hr>Naveenth<br>18MIS0071<hr>Nishit Pandit<br>19BCE2514<hr>Vishwa senthilkumar<br>19BCI0259<hr>Sarthak Narang<br>18BCI0030<hr></section>
+
+    <script>
+        var request = new XMLHttpRequest()
+        
+        request.open('GET', 'http://localhost:1337/recruits', true)
+        request.onload = function() {
+          // Begin accessing JSON data here
+          var data = JSON.parse(this.response)
+    
+          if (request.status >= 200 && request.status < 400) {
+            data.forEach(recruit => {
+              rec_name=recruit.field1; 
+              rec_reg=recruit.field2;    
+              document.getElementById("recruits").innerHTML=document.getElementById("recruits").innerHTML+rec_name+"<br>"+rec_reg+"<hr>"
+              
+            })
+          } else {
+            console.log('error')
+          }
+
+          
+        }
+        
+        request.send()
+        
+
+        </script>
+
+        
+        
+
+</body></html>
